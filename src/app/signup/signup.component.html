@@ -1,0 +1,78 @@
+<!-- The Modal -->
+<div class="modal" *ngIf = "!isToVerify && !isVerified">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    <h2>Hey There! Welcome to Annapurna</h2>
+    <a routerLink="/" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+    <form action="">
+      <div class="form-group">
+        <label for="name">Tell us your Name</label>
+        <input type="text" class="form-control" placeholder="Full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Tell us your Email</label>
+        <input type="email" class="form-control" placeholder="email">
+      </div>
+    </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" (click)="sendToVerify()">Verify</button>
+      <button class="btn" routerLink="/">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div class="modal" *ngIf = "isToVerify && !isVerified">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    <h2>Hey There! Welcome to Annapurna</h2>
+    <a routerLink="/" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+    <form action="">
+      <div class="form-group">
+        <label for="otp">Enter six digit OTP</label>
+        <input type="text" class="form-control" placeholder="OTP">
+      </div>
+    </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" (click)="validateVerification()">Proceed</button>
+      <button class="btn" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div class="modal" *ngIf = "isToVerify && isVerified">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    <h2>Congratulations! user. You are one Step away from Food Cave</h2>
+    <a routerLink="/" class="close">&times;</a>
+    </div>
+    <div class="modal-body">
+    <form action="">
+      <div class="form-group">
+        <label for="otp">Set up a Password</label>
+        <input type="password" class="form-control" placeholder="Password">
+      </div>
+    </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" (click)="signUpAndLogin()">SignUp</button>
+      <button class="btn" routerLink="/">Cancel</button>
+    </div>
+  </div>
+
+</div>

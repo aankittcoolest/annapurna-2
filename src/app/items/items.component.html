@@ -1,0 +1,14 @@
+  <div class="card-columns">
+    <div class="card" *ngFor="let item of menuItems" (click)="toggleSelectableCard(item.itemId)">
+      <img src="https://cdn.pixabay.com/photo/2018/01/28/11/24/nature-3113318_960_720.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a sample card</p>
+        <button class="btn btn-primary" (click)="showDetails(itemId)">Show Details</button>
+      </div>
+    </div>
+  </div>
+
+<div *ngIf="showItemDetails">
+  <app-item-detail (details)="toggleDetails($event)" [itemDetailsId]="itemId"></app-item-detail>
+</div>

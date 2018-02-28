@@ -1,0 +1,66 @@
+.gallery {
+    width: 100%;
+    background-color: #1D1D1D;
+    margin-top: 0px;
+}
+
+.gallery-content {
+    padding-bottom: 100px;
+}
+
+.gallery-grid {
+    width: 100%;
+}
+
+.row, .clearfix {
+  zoom: 1;
+}
+
+.gallery-title {
+  padding-top: 100px;
+}
+
+.gallery-title h3 {
+  color: #e94040;
+}
+
+.underline {
+  height: 1px;
+  background-color: #fff;
+  width: 100px;
+  margin: auto;  
+}
+
+.gallery-details {
+  margin-top: 50px;
+}
+
+.filters {
+  padding: 0px;
+  list-style: none;
+  width: 450px;
+  margin-bottom: 55px;
+  margin: auto;
+}
+
+.filters li {
+  float: left;
+  margin-right: 8px;
+}
+
+.filters li span {
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+  color: #A1A1A1;
+  cursor: pointer;
+  border: 1px solid #818181;
+  border-radius: 6px;
+}
+
+.filters li span.active {
+  background: #e94040;
+  color: white;
+  border: 1px solid #515151;
+  border-radius: 6px;
+}

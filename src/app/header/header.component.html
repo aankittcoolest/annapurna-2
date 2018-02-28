@@ -1,0 +1,86 @@
+<div *ngIf="!isLoggedIn">
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-cutlery title-icon" aria-hidden="true"></i>
+            <span>ANNAPURNA</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="item">
+                    <a pageScroll href="#homePart" class="link active">Home</a>
+                </li>
+                <li class="item">
+                    <a pageScroll href="#aboutPart" class="link">About</a>
+                </li>
+                <li class="item">
+                    <a pageScroll href="#historyPart" class="link">History</a>
+                </li>
+                <li class="item">
+                    <a pageScroll href="#servicesPart" class="link">Services</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="item">
+                    <a href="#" class="link" (click)="toggleLogin()">Login</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link" (click)="toggleSignUp()">Sign Up</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <app-signup *ngIf="showSignUp" (isShow)="closeModal($event)"></app-signup>
+
+
+</div>
+
+<div *ngIf="isLoggedIn">
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <a class="navbar-brand" href="#">
+            <i class="fa fa-cutlery title-icon" aria-hidden="true"></i>
+            <span>ANNAPURNA</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="item">
+                    <a pageScroll routerLink="/" class="link active">Home</a>
+                </li>
+                <li class="item">
+                    <a pageScroll href="#aboutPart" class="link">Menu</a>
+                </li>
+                <li class="item">
+                    <a pageScroll href="#historyPart" class="link">Orders</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="item">
+                    <a href="#" class="link" (click)="toggleLogin()">Profile</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link" (click)="toggleSignUp()">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <app-signup *ngIf="showSignUp" (isShow)="closeModal($event)"></app-signup>
+
+
+</div>

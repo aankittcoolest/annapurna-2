@@ -1,0 +1,141 @@
+.service {
+    width: 100%;
+    background-color: white;
+    margin-top: 0px;
+    position: relative;
+  }
+  
+  .service-parallex {
+    background: url("http://annapurna-foods.com/annapurna/html/img/service.jpg");
+    margin: 0;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  
+  .service-parallex:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0 ,0 ,0, 0.81);
+  }
+  
+  .service-grid {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index:11;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .service-title {
+    padding-top: 0px;
+  }
+  
+  
+  .service-title h3 {
+    color: #e94040;
+    font-size: 33px;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  
+  .underline {
+    height: 1px;
+    width: 100px;
+    margin: auto;
+    background-color: white;
+  }
+  
+  
+  .service-title p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0px;
+    line-height: 27px;
+    margin-top: 19px;
+  }
+  
+  .about-row {
+    margin-top: 50px;
+  }
+  
+  .service-details {
+    padding: 0px;
+    margin-bottom: 30px;
+    transition: .4s;
+    background-color: #171717;
+    margin-right: 0px;
+  }
+
+  .media {
+      display: -webkit-box;
+      -webkit-box-align: inherit;
+  }
+  
+  .service-media-left-1 {
+    padding-right: 2px;
+    background-image: url(http://annapurna-foods.com/annapurna/html/img/service1.jpg);
+    width: 30%;
+    background-size: cover;
+  }
+  
+  .service-media-left-2 {
+    padding-right: 2px;
+    background-image: url(http://annapurna-foods.com/annapurna/html/img/service2.jpg);
+    width: 30%;
+    background-size: cover;
+  }
+  
+  
+  .service-media-left-3 {
+    padding-right: 2px;
+    background-image: url(http://annapurna-foods.com/annapurna/html/img/service3.jpg);
+    width: 30%;
+    background-size: cover;
+  }
+  
+  
+  .service-media-left-4 {
+    padding-right: 2px;
+    background-image: url(http://annapurna-foods.com/annapurna/html/img/service4.jpg);
+    width: 30%;
+    background-size: cover;
+  }
+  
+   .service-media-body {
+    padding: 30px 30px;
+  }
+  
+  .service-media-body h3 {
+    color: #e94040;
+    font-size: 17px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: .4s;
+    -webkit-transition: .4s;
+    margin-bottom: 0px;
+    font-weight: 600;
+    margin: 0px;
+  }
+  
+  .service-media-body p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 13px;
+    letter-spacing: 1px;
+  }

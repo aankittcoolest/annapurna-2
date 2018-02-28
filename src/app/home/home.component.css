@@ -1,0 +1,72 @@
+.home {
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .home-default {
+    background: url(http://annapurna-foods.com/annapurna/html/img/img2.jpg);
+    margin: 0;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    text-align: center;
+  }
+
+  
+  .home-content-main {
+    height: 100%;
+    width: 100%;
+    display: table;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  h3 {
+    color: #e94040;
+    font-size: 63px;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 2px;
+    line-height: 55px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 39px;
+    margin-top: 17px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .home-content-main {
+    z-index: 1;
+    height: 100%;
+  }
+  
+  .text-over-image {
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .home-default::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(0,0,0,0.68);
+      top: 0;
+      left: 0;
+  }

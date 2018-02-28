@@ -1,0 +1,131 @@
+#cheff {
+    width: 100%;
+    background-color: #393939;
+    margin-top: 0px;
+    position: relative;
+  }
+  
+  .cheff-content {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  
+  .cheff-grid {
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  .cheff-title {
+    width: 100%;
+  }
+  
+  .cheff-title h3 {
+    color: #e94040;
+    font-size: 33px;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  
+  .underline {
+    height: 1px;
+    width: 100px;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .cheff-title p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: white;
+    padding: 0px;
+    line-height: 27px;
+    margin-top: 19px;
+  }
+  
+  .about-row {
+    margin-top: 50px;
+  }
+  
+  .cheff-col {
+    padding: 6px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .cheff-member {
+    position: relative;
+    overflow: hidden;
+    margin: 0px 9px;
+    margin-bottom: 21px;
+  }
+  
+  .cheff-img {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    border: 5px solid white;
+     -webkit-transition: .4s;
+  }
+  
+  .cheff-details {
+    padding: 11px 20px;
+    background-color: #1B1B1B;
+    margin-top: 0px;
+    position: relative;
+    z-index: 11111;
+    -webkit-transition: .4s;
+  }
+  
+  .cheff-details h3 {
+    color: #e94040;
+    margin: 0px;
+    font-size: 20px;
+    margin-top: 7px;
+  }
+  
+  .cheff-details p {
+    margin: 0px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 7px;
+  }
+  
+  .cheff-icon-grid {
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    margin-top: 16px;
+    -webkit-transition: .3s;
+  }
+  
+  .cheff-icon {
+    margin-top: 3px;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: .3s;
+  }
+  
+  .cheff-social {
+    padding-left: 0px;
+    display: inline-flex;
+    list-style: none;
+    margin: 0px;
+  }
+  
+  .chef-social li {
+    margin: 0px;
+  }
+  
+  .cheff-social li a {
+    font-size: 18px;
+    color: white;
+    -webkit-transition: .3s;
+    text-align: center;
+    margin-right: 11px;
+    float: left;
+  }
