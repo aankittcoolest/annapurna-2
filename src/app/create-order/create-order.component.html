@@ -1,0 +1,29 @@
+<div class="container">
+  <app-categories (currentCategory)="updateCurrentCategory($event)"></app-categories>
+</div>
+
+<div *ngIf="showEdit==true">
+  <button class="btn btn-primary" (click)="toggleEdit()">Edit</button>
+</div>
+<div *ngIf="showConfirm==true && showProcessOrder == false">
+  <button class="btn btn-primary" (click)="toggleProcessOrderButton()">Confirm Order</button>
+</div>
+<div *ngIf="showProcessOrder==true">
+  <button class="btn btn-primary" (click)="saveOrder()">Process Order</button>
+</div>
+
+
+<div *ngFor="let menu of currentMenuItems">
+  <div class="container" *ngIf="menu.items">
+    <h1 class="display-3">{{menu.categoryName}}</h1>
+  </div>
+  <div class="container">
+    <app-items [menuItems]="menu.items" [isEditable]="showProcessOrder" (showConfirm)="toggleConfirmButton($event)"></app-items>
+  </div>
+</div>
+
+
+
+
+<button class="filterCategory">F</button>
+<button class="cart">C</button>

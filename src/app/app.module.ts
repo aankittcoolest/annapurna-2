@@ -23,13 +23,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ItemsComponent } from './items/items.component';
 import { OrdersComponent } from './orders/orders.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { CreateOrderComponent } from './create-order/create-order.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'loggedIn', component: LoggedInComponent }
+  { path: 'loggedIn', component: LoggedInComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: 'order-detail/:id', component: OrderDetailsComponent },
+  { path: 'create-order', component: CreateOrderComponent },
 ]
 
 
@@ -51,7 +56,9 @@ const appRoutes: Routes = [
     SidebarComponent,
     CategoriesComponent,
     ItemsComponent,
-    OrdersComponent
+    OrdersComponent,
+    OrderDetailsComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,

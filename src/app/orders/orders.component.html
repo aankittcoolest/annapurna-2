@@ -1,5 +1,6 @@
+        <a [routerLink]="['/create-order']">Create new Order</a>
 <div class="container">
-    <div class="pricing-table clear">
+    <div class="pricing-table clear" *ngFor="let order of orders">
       <div class="plan most-popular">
         <h3>Professional<span>$29</span></h3>
         <a class="signup" href="">Sign up</a>
@@ -8,6 +9,7 @@
           <li><b>50GB</b> Monthly Bandwidth</li>
           <li><b>10</b> Email Accounts</li>
           <li><b>Unlimited</b> subdomains</li>
+          <li><a [routerLink]="['/order-detail', order.orderId]">Detail</a></li>
         </ul>
       </div>
     </div>

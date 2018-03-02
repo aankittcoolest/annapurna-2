@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-items',
@@ -10,8 +10,16 @@ export class ItemsComponent implements OnInit {
   @Input()
   menuItems
 
+  @Input()
+  isEditable
+
+  @Output()
+  showConfirm = new EventEmitter<Boolean>()
+
   itemId: String
   showItemDetails: boolean = false
+
+  totalItems: number = 0
 
   constructor() { }
 
@@ -25,20 +33,25 @@ export class ItemsComponent implements OnInit {
   }
 
   toggleDetails(closeModal) {
-    console.log("ok")
     this.showItemDetails = closeModal
+    this.toggleSelectableCard(this.itemId)
   }
 
   toggleSelectableCard(itemId) {
     let selectedItem = this.menuItems.forEach(item => {
       if(item.itemId === itemId) {
         item.isSelected = !item.isSelected
+        this.totalItems = item.isSelected ? ++this.totalItems : --this.totalItems
+        if(this.totalItems > 0) {
+          this.showConfirm.emit(true)
+        }else {
+          this.showConfirm.emit(false)
+
+        }
+      
       }
     })
     
-  
-    console.log(selectedItem)
-    console.log(this.menuItems)
   }
 
 }

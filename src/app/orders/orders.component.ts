@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-orders',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor() { }
+  orders =
+    [
+      {'orderId': 1, 'name': '1st order'},
+      {'orderId': 2, 'name': '2nd order'},
+      {'orderId': 3, 'name': '3rd order'},
+      {'orderId': 4, 'name': '4th order'}
+    ]
+
+  constructor(router: Router) { }
 
   ngOnInit() {
+  }
+
+  showDetails() {
   }
 
 }
