@@ -1,3 +1,5 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
 <div class="container">
   <app-categories (currentCategory)="updateCurrentCategory($event)"></app-categories>
 </div>
@@ -11,7 +13,6 @@
 <div *ngIf="showProcessOrder==true">
   <button class="btn btn-primary" (click)="saveOrder()">Process Order</button>
 </div>
-
 
 <div *ngFor="let menu of currentMenuItems">
   <div class="container" *ngIf="menu.items">

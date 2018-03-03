@@ -1,20 +1,17 @@
-<div class="col-sm-3 col-md-2 sidebar">
-    <ul class="nav nav-sidebar">
-      <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-      <li><a href="#">Reports</a></li>
-      <li><a href="#">Analytics</a></li>
-      <li><a href="#">Export</a></li>
+<div *ngIf="openSideBar==true">
+<nav [ngClass]="{'nav-side-mobile':openSideBar==true}">
+  <h3>Filter Items</h3>
+    <ul>
+      <div class="line"></div>
+      <li>All</li>
+      <li>Paneer</li>
+      <li>Stalls</li>
+      <li>Chaat</li>
+      <li>Deserts</li>
+      <li>MainCourse</li>
     </ul>
-    <ul class="nav nav-sidebar">
-      <li><a href="">Nav item</a></li>
-      <li><a href="">Nav item again</a></li>
-      <li><a href="">One more nav</a></li>
-      <li><a href="">Another nav item</a></li>
-      <li><a href="">More navigation</a></li>
-    </ul>
-    <ul class="nav nav-sidebar">
-      <li><a href="">Nav item again</a></li>
-      <li><a href="">One more nav</a></li>
-      <li><a href="">Another nav item</a></li>
-    </ul>
-  </div>
+</nav>
+</div>
+
+
+<button class="btn btn-danger" (click)="toggleSideBar()">Open Sidebar</button>

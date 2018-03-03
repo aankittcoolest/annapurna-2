@@ -6,7 +6,7 @@
   }
   
   .service-parallex {
-    background: url("http://annapurna-foods.com/annapurna/html/img/service.jpg");
+    background: url(../../assets/img/service.jpg);
     margin: 0;
     height: 100%;
     position: relative;
@@ -88,14 +88,14 @@
   
   .service-media-left-1 {
     padding-right: 2px;
-    background-image: url(http://annapurna-foods.com/annapurna/html/img/service1.jpg);
+    background-image: url(../../assets/img/service1.jpg);
     width: 30%;
     background-size: cover;
   }
   
   .service-media-left-2 {
     padding-right: 2px;
-    background-image: url(http://annapurna-foods.com/annapurna/html/img/service2.jpg);
+    background-image: url(../../assets/img/service2.jpg);
     width: 30%;
     background-size: cover;
   }
@@ -103,7 +103,7 @@
   
   .service-media-left-3 {
     padding-right: 2px;
-    background-image: url(http://annapurna-foods.com/annapurna/html/img/service3.jpg);
+    background-image: url(../../assets/img/service3.jpg);
     width: 30%;
     background-size: cover;
   }
@@ -111,7 +111,7 @@
   
   .service-media-left-4 {
     padding-right: 2px;
-    background-image: url(http://annapurna-foods.com/annapurna/html/img/service4.jpg);
+    background-image: url(../../assets/img/service4.jpg);
     width: 30%;
     background-size: cover;
   }

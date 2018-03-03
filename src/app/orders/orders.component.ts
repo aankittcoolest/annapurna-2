@@ -16,9 +16,12 @@ export class OrdersComponent implements OnInit {
       {'orderId': 4, 'name': '4th order'}
     ]
 
+  latestOrder = this.orders[0]
+
   constructor(router: Router) { }
 
   ngOnInit() {
+    this.orders.splice(0,1)
   }
 
   showDetails() {

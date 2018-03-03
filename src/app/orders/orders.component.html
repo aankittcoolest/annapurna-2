@@ -1,32 +1,42 @@
-        <a [routerLink]="['/create-order']">Create new Order</a>
+<div class="orders">
 <div class="container">
+  <a [routerLink]="['/create-order']" class="btn btn-lg btn-primary">Create new Order</a>
+</div>
+<div class="container">
+  <h1>Your latest Order</h1>
+
+  <div class="row">
+    <div class="pricing-table pricing-table-latest clear">
+      <div class="plan most-popular">
+        <h3><span class="card-title">Annapurna</span>
+          <span class="order-date">29th Aug 2018</span>
+        </h3>
+        <li>
+          <a [routerLink]="['/order-detail', latestOrder.orderId]" class="btn btn-lg btn-success">Order Details</a>
+        </li>
+  <button type="button" class="btn btn-default btn-circle btn-xl"><span class="items"><span class="items-count">10</span><br>items</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Your Past Orders</h1>
+
+  <div class="row">
     <div class="pricing-table clear" *ngFor="let order of orders">
       <div class="plan most-popular">
-        <h3>Professional<span>$29</span></h3>
-        <a class="signup" href="">Sign up</a>
-        <ul>
-          <li><b>5GB</b> Disk Space</li>
-          <li><b>50GB</b> Monthly Bandwidth</li>
-          <li><b>10</b> Email Accounts</li>
-          <li><b>Unlimited</b> subdomains</li>
-          <li><a [routerLink]="['/order-detail', order.orderId]">Detail</a></li>
-        </ul>
+        <h3><span class="card-title">Annapurna</span>
+          <span class="order-date">29th Aug 2018</span>
+        </h3>
+        <li>
+          <a [routerLink]="['/order-detail', order.orderId]" class="btn btn-lg btn-success">Order Details</a>
+        </li>
+  <button type="button" class="btn btn-default btn-circle btn-xl"><span class="items"><span class="items-count">10</span><br>items</span></button>
       </div>
     </div>
-    
-    <div class="pricing-table clear">
-      <div class="plan most-popular">
-        <h3>Professional<span>$29</span></h3>
-        <a class="signup" href="">Sign up</a>
-        <ul>
-          <li><b>5GB</b> Disk Space</li>
-          <li><b>50GB</b> Monthly Bandwidth</li>
-          <li><b>10</b> Email Accounts</li>
-          <li><b>Unlimited</b> subdomains</li>
-        </ul>
-      </div>
-    </div>
-  
-  
+
+  </div>
+  </div>
 
 </div>
