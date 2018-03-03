@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CATEGORIES } from '../mock-categories'
+import { Category } from '../category'
 
 @Component({
   selector: 'app-create-order',
@@ -7,87 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateOrderComponent implements OnInit {
 
-  showEdit:boolean = false
-  displayText:string = 'Edit'
-  showConfirm:boolean = false
+  showEdit: boolean = false
+  displayText: string = 'Edit'
+  showConfirm: boolean = false
   showProcessOrder: boolean = false
 
-  menuItems =
-    [
-      {
-        categoryId: 1,
-        categoryName: 'Paneer',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 4, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 5, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 2,
-        categoryName: 'stalls',
-         items: [
-          { itemId: 6, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 7, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 8, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 9, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 10, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 3,
-        categoryName: 'chaat',
-         items: [
-          { itemId: 11, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 12, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 13, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 14, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 15, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 4,
-        categoryName: 'deserts',
-         items: [
-          { itemId: 16, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 17, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 18, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 19, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 20, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 5,
-        categoryName: 'maincourse',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 4, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 5, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 6,
-        categoryName: 'stalls',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-    ]
+  menuItems = CATEGORIES
 
-    currentMenuItems: any
+  currentMenuItems: any
 
   currentCategoryId: number
 
-  confirmedItems
- 
-  constructor() { 
-    
+  confirmedMenuItems = []
+
+  constructor() {
+
   }
 
   ngOnInit() {
@@ -96,11 +32,21 @@ export class CreateOrderComponent implements OnInit {
 
 
   updateCurrentCategory(categoryId) {
-    if(categoryId === 0) {
-      return this.currentMenuItems = this.menuItems
-    }
     this.currentCategoryId = categoryId
-    this.currentMenuItems = this.menuItems.filter(category => category.categoryId === categoryId)
+    console.log(this.currentCategoryId)
+    if (this.showEdit) {
+      console.log("I came here")
+      if (categoryId === 0) {
+        return this.currentMenuItems = this.confirmedMenuItems
+      }
+      this.currentMenuItems = this.confirmedMenuItems.filter(category => category.categoryId == categoryId)
+    } else {
+      if (categoryId === 0) {
+        return this.currentMenuItems = this.menuItems
+      }
+      this.currentMenuItems = this.menuItems.filter(category => category.categoryId == categoryId)
+
+    }
   }
 
   toggleConfirmButton(countItems) {
@@ -112,15 +58,36 @@ export class CreateOrderComponent implements OnInit {
     this.showConfirm = false
     this.showProcessOrder = true
 
+    this.populateConfirmedItems()
 
+  }
+
+  populateConfirmedItems() {
+    let tmpCategory: Category
+    let tmpItems = [];
+    this.currentMenuItems.forEach(category => {
+      category.items.forEach(item => {
+        if (item.isSelected == true) {
+          tmpItems.push(item)
+        }
+      })
+
+      if (tmpItems.length > 0) {
+        tmpCategory = new Category(category.categoryId, category.categoryName, tmpItems)
+        this.confirmedMenuItems.push(tmpCategory)
+      }
+      tmpItems = []
+    });
+
+    this.currentMenuItems = this.confirmedMenuItems
   }
 
   toggleEdit() {
     this.showEdit = false
     this.showConfirm = true
     this.showProcessOrder = false
-    this.confirmedItems = null
-    console.log("ok")
+    this.currentMenuItems = this.menuItems
+    this.confirmedMenuItems = []
   }
 
 

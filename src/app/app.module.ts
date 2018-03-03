@@ -25,6 +25,7 @@ import { ItemsComponent } from './items/items.component';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { StepsComponent } from './steps/steps.component';
 
 const appRoutes: Routes = [
   { path: '', component: MainComponent },
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     ItemsComponent,
     OrdersComponent,
     OrderDetailsComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    StepsComponent
   ],
   imports: [
     BrowserModule,

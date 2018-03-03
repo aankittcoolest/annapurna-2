@@ -5,3 +5,21 @@
 .selected {
     background-color: lightgreen;
 }
+
+.card-body {
+    background: #1A1A1A;
+}
+
+.card-title {
+    color: #e94040;
+    font-family: 'Courgette', cursive;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}

@@ -1,22 +1,30 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
+<div class="create-order">
 <div class="container">
   <app-categories (currentCategory)="updateCurrentCategory($event)"></app-categories>
 </div>
+<div class="container confirm">
+  <div *ngIf="showConfirm==true && showProcessOrder == false">
+    <button class="btn btn-primary confirm-btn" (click)="toggleProcessOrderButton()">Confirm Order</button>
+  </div>
+</div>
 
-<div *ngIf="showEdit==true">
-  <button class="btn btn-primary" (click)="toggleEdit()">Edit</button>
-</div>
-<div *ngIf="showConfirm==true && showProcessOrder == false">
-  <button class="btn btn-primary" (click)="toggleProcessOrderButton()">Confirm Order</button>
-</div>
-<div *ngIf="showProcessOrder==true">
-  <button class="btn btn-primary" (click)="saveOrder()">Process Order</button>
+
+<div class="container movements">
+  <div *ngIf="showEdit==true">
+    <button class="btn btn-primary edit-btn" (click)="toggleEdit()">Edit</button>
+  </div>
+  <div *ngIf="showProcessOrder==true">
+    <button class="btn btn-primary process-btn" (click)="saveOrder()">Process Order</button>
+  </div>
 </div>
 
 <div *ngFor="let menu of currentMenuItems">
   <div class="container" *ngIf="menu.items">
+
     <h1 class="display-3">{{menu.categoryName}}</h1>
+    <div class="item-underline"></div>
   </div>
   <div class="container">
     <app-items [menuItems]="menu.items" [isEditable]="showProcessOrder" (showConfirm)="toggleConfirmButton($event)"></app-items>
@@ -28,3 +36,5 @@
 
 <button class="filterCategory">F</button>
 <button class="cart">C</button>
+
+</div>
