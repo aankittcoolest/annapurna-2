@@ -35,6 +35,17 @@
   margin-left: 90%;
 }
 
-.test {
-  background-color: blueviolet;
+.display-3 {
+    color: #e94040;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.item-underline {
+    height: 3px;
+    background-color: #fff;
+    max-width: 40%;
+    margin-bottom: 40px;
 }

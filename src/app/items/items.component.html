@@ -1,11 +1,18 @@
   <div class="card-columns">
     <div class="card" *ngFor="let item of menuItems" 
-    (click)="isEditable || toggleSelectableCard(item.itemId)" [ngClass]="{selected: item.isSelected==true}">
+    [ngClass]="{selected: item.isSelected==true}">
+    <div class="test">
       <img src="./assets/img/img2.jpg" alt="" class="card-img-top">
+      <div *ngIf="item.isSelected">
+      <i class="fa fa-shopping-cart cart-icon"></i>
+      </div>
+    </div>
       <div class="card-body">
         <h5 class="card-title">Card title</h5>
         <p class="card-text">This is a sample card</p>
-        <button class="btn btn-primary" (click)="showDetails(itemId)">Show Details</button>
+        <button class="btn details" (click)="showDetails(itemId)">Show Details</button>
+        <button class="btn cart" (click)="toggleSelectableCard(item.itemId)" *ngIf="!item.isSelected && isCreateOrder">Add To Cart</button>
+        <button class="btn cart" (click)="toggleSelectableCard(item.itemId)" *ngIf="item.isSelected && !isEditable">Remove</button>
       </div>
     </div>
   </div>

@@ -8,13 +8,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ItemsComponent implements OnInit {
 
   @Input()
+  isCreateOrder
+
+  @Input()
   menuItems
 
   @Input()
   isEditable
 
+  @Input()
+  confirmedItemsCount:number
+
   @Output()
-  showConfirm = new EventEmitter<Boolean>()
+  showConfirm = new EventEmitter<number>()
 
   itemId: String
   showItemDetails: boolean = false
@@ -41,17 +47,10 @@ export class ItemsComponent implements OnInit {
     let selectedItem = this.menuItems.forEach(item => {
       if(item.itemId === itemId) {
         item.isSelected = !item.isSelected
-        this.totalItems = item.isSelected ? ++this.totalItems : --this.totalItems
-        if(this.totalItems > 0) {
-          this.showConfirm.emit(true)
-        }else {
-          this.showConfirm.emit(false)
-
-        }
-      
+        this.totalItems = item.isSelected ? ++this.confirmedItemsCount : --this.confirmedItemsCount
+        this.showConfirm.emit(this.confirmedItemsCount)
       }
     })
     
   }
-
 }

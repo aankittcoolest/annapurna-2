@@ -25,5 +25,59 @@
 }
 
 .create-order {
-    background-color: #333;
+    /* background-color: #333; */
+
 }
+  .btn-circle.btn-sm {
+    width: 200px;
+    height: 200px;
+    line-height: 1.33;
+    /* border-radius: 50%; */
+    margin-top: 20px;
+    background-color: #e94040;
+    margin-left: 20px;
+    position: relative;
+    float: right;
+  }
+
+  .bg-light {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      bottom: 0;
+      height: 80px;
+  }
+
+  span {
+      font-size: 20px;
+      bottom: 15px;
+
+  }
+
+  .btn-confirm {
+      background-color: #e94040;
+      padding: 10px;
+      width: 100px;
+      margin-top: 15px;
+      margin-left: 15px;
+  }
+
+ .fa-stack-1x {
+     color: #fff;
+  }
+
+  .confirm {
+      float: right;
+      padding-right: 80px;
+      margin-top: -10px;
+  }
+
+  .process {
+      display: flex;
+      justify-content: space-around;
+      margin-top: -20px;
+  }
+
+  .bottom {
+      height: 100px;
+  }

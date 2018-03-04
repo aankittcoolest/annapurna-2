@@ -29,7 +29,7 @@
     width: 100%;
     height: 550px;
     padding: 0px;
-    background-image: url('https://www.picwallz.com/wp-content/uploads/2017/02/wallpaper-hd-nature-on-full-pics-of-mobile-phones-wallpapers.jpg');
+    background-image: url(../../assets/img/about-image.jpg);
     background-size: cover;
     background-position: center center;
   }

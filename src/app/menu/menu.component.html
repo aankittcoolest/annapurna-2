@@ -1,12 +1,11 @@
-<div class="container">
   <app-categories (currentCategory)="updateCurrentCategory($event)"></app-categories>
-</div>
 
 <div *ngFor="let menu of currentMenuItems">
   <div class="container">
     <h1 class="display-3">{{menu.categoryName}}</h1>
+    <div class="item-underline"></div>
   </div>
   <div class="container">
-  <app-items [menuItems]="menu.items"></app-items>
+  <app-items [menuItems]="menu.items" [isCreateOrder]="isCreateOrder"></app-items>
   </div>
 </div>

@@ -2,8 +2,8 @@
     cursor: pointer;
 }
 
-.selected {
-    background-color: lightgreen;
+.selected > .card-body{
+    background-color: #dacece;
 }
 
 .card-body {
@@ -22,4 +22,36 @@
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 24px;
+}
+
+.details {
+    background-color: #e94040;
+}
+
+.details:hover {
+    background-color: #b7bec4d9;
+}
+
+.cart {
+    background-color: #e94040;
+}
+
+.cart:hover {
+    background-color: #b7bec4d9;
+}
+
+img {
+    position: relative;
+}
+
+.cart-icon {
+    font-size: 30px;
+    position: relative;
+    margin-top: -170px;
+    margin-right: 20px;
+    float: right;
+    border: 3px solid antiquewhite;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
 }

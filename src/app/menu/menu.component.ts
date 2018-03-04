@@ -1,34 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { CATEGORIES } from '../mock-categories';
 
-class Item{
+class Item {
   itemId: string
   name: string
   isSelected: boolean
   imageUrl: string
 
   constructor(itemId, name, isSelected, imageUrl) {
-    this.itemId=itemId
+    this.itemId = itemId
     this.name = name
     this.isSelected = isSelected
     this.imageUrl = imageUrl
   }
 }
 
-  class Category {
+class Category {
 
-    categoryId:string
-    categoryName:string
-    items:Item[]
+  categoryId: string
+  categoryName: string
+  items: Item[]
 
-    constructor(categoryId, categoryName, items) {
-      this.categoryId = categoryId
-      this.categoryName = categoryName
-      this.items = items
-
-    }
+  constructor(categoryId, categoryName, items) {
+    this.categoryId = categoryId
+    this.categoryName = categoryName
+    this.items = items
 
   }
+
+}
 
 @Component({
   selector: 'app-menu',
@@ -39,11 +39,11 @@ export class MenuComponent implements OnInit {
 
   menuItems = CATEGORIES
 
-    currentMenuItems: Object[]
-
-
+  currentMenuItems: Object[]
 
   currenCategoryId: String
+
+  isCreateOrder: boolean = false
 
   constructor() { }
 
@@ -53,11 +53,11 @@ export class MenuComponent implements OnInit {
 
 
   updateCurrentCategory(categoryId) {
-    if(categoryId === 0) {
+    if (categoryId === 0) {
       return this.currentMenuItems = this.menuItems
     }
     this.currenCategoryId = categoryId
-    this.currentMenuItems = this.menuItems.filter(category => category.categoryId === categoryId)
+    this.currentMenuItems = this.menuItems.filter(category => category.categoryId == categoryId)
   }
 
 }

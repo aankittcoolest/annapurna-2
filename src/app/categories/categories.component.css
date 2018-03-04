@@ -93,7 +93,7 @@
     background-color: #e94040;
     position: fixed;
     z-index: 2;
-    bottom: 90px;
+    bottom: 50px;
     margin-left: 20px;
   }
 
@@ -102,8 +102,4 @@
     content: "\f0B0";
     font-size: 30px;
     margin-left: -10px;
-  }
-
-  .fa .fa-filter::before {
-    font-size: 100px;
   }

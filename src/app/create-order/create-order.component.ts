@@ -24,6 +24,10 @@ export class CreateOrderComponent implements OnInit {
 
   showHideFilter: boolean
 
+  confirmedItemsCount: string='0'
+
+  isCreateOrder:boolean = true
+
   constructor() {
 
   }
@@ -37,7 +41,6 @@ export class CreateOrderComponent implements OnInit {
     this.currentCategoryId = categoryId
     console.log(this.currentCategoryId)
     if (this.showEdit) {
-      console.log("I came here")
       if (categoryId === 0) {
         return this.currentMenuItems = this.confirmedMenuItems
       }
@@ -53,6 +56,8 @@ export class CreateOrderComponent implements OnInit {
 
   toggleConfirmButton(countItems) {
     this.showConfirm = countItems > 0 ? true : false
+    console.log(countItems)
+    this.confirmedItemsCount = countItems
   }
 
   toggleProcessOrderButton() {
