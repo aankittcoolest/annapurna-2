@@ -1,0 +1,109 @@
+@media(min-width: 991px) {
+.nav-side {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(0, 0, 0, 0.81);
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    margin-left: -250px;
+    transition: margin 5s ease-in-out;
+    -webkit-transition: margin 5s ease-in-out;
+  }
+}
+
+.nav-side-mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    background-color: rgba(0, 0, 0, 0.81);
+    box-sizing: border-box;
+    padding: 20px;
+    color: #fff;
+    transition: margin 5s ease-in-out;
+    -webkit-transition: margin 5s ease-in-out;
+    z-index: 1;
+ /*   margin-left: -250px;*/
+  }
+  
+  .nav-toggle {
+    position: absolute;
+    right: -40px;
+    top:0;
+    width: 40px;
+    height: 40px;
+    background-color:rgba(0, 0, 0, 0.81);
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom-right-radius: 3px;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, .1);
+   
+  }
+  
+  .nav-toggle:before {
+    content: "\2192";
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .btn-danger {
+      float: right;
+  }
+
+  li {
+    list-style: none;
+    color: #e94040;
+    font-family: 'Courgette', cursive;  
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    padding-top: 10px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+    padding-left: 30px;padding-bottom: 10px;
+    margin-left: -70px;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+
+  li:hover {
+      background-color: #5c5757;
+  }
+
+  .active {
+      background-color: #e94040;
+      color: #fff;
+  }
+
+  .btn-circle.btn-sm {
+    width: 50px;
+    height: 50px;
+    line-height: 1.33;
+    border-radius: 50%;
+    margin-top: 20px;
+    background-color: #e94040;
+    position: fixed;
+    z-index: 2;
+    bottom: 90px;
+    margin-left: 20px;
+  }
+
+  .btn-circle.btn-sm::before {
+    font-family: FontAwesome;
+    content: "\f0B0";
+    font-size: 30px;
+    margin-left: -10px;
+  }
+
+  .fa .fa-filter::before {
+    font-size: 100px;
+  }

@@ -1,9 +1,5 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
+<app-categories (currentCategory)="updateCurrentCategory($event)" [showHideFilterInput]="showHideFilter"></app-categories>
 <div class="create-order">
-<div class="container">
-  <app-categories (currentCategory)="updateCurrentCategory($event)"></app-categories>
-</div>
 <div class="container confirm">
   <div *ngIf="showConfirm==true && showProcessOrder == false">
     <button class="btn btn-primary confirm-btn" (click)="toggleProcessOrderButton()">Confirm Order</button>
@@ -30,11 +26,5 @@
     <app-items [menuItems]="menu.items" [isEditable]="showProcessOrder" (showConfirm)="toggleConfirmButton($event)"></app-items>
   </div>
 </div>
-
-
-
-
-<button class="filterCategory">F</button>
-<button class="cart">C</button>
 
 </div>

@@ -70,3 +70,15 @@
       top: 0;
       left: 0;
   }
+
+.menu {
+    background-color: #e94040;
+    border: 1px solid #e94040;
+    font-size: 30px;
+    padding: 13px 80px;
+    color: #fff;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}

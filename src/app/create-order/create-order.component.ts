@@ -22,6 +22,8 @@ export class CreateOrderComponent implements OnInit {
 
   confirmedMenuItems = []
 
+  showHideFilter: boolean
+
   constructor() {
 
   }
@@ -90,5 +92,9 @@ export class CreateOrderComponent implements OnInit {
     this.confirmedMenuItems = []
   }
 
+  toggleFilter(e) {
+    console.log(e)
+    this.showHideFilter = e
+  }
 
 }

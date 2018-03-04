@@ -1,5 +1,11 @@
-<div class="nav nav-pills">
-  <li class="nav-item" *ngFor="let category of categories">
-    <button class="btn" (click)="updateCategory(category.categoryId)">{{category.name}}</button>
-  </li>
+<div *ngIf="showHideFilterInput==true">
+  <nav [ngClass]="{'nav-side-mobile':showHideFilterInput==true}">
+    <h3 class="nav-title">Filter Items</h3>
+    <ul *ngFor="let category of categories">
+
+      <li (click)="updateCategory(category.categoryId)" [ngClass]="{active: currentCategoryId == category.categoryId}">{{category.name}}</li>
+    </ul>
+  </nav>
 </div>
+
+  <button type="button" class="btn btn-circle btn-sm" (click)="toggleSideBar()"></button>

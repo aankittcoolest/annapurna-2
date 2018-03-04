@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CATEGORIES } from '../mock-categories';
 
 class Item{
   itemId: string
@@ -36,74 +37,7 @@ class Item{
 })
 export class MenuComponent implements OnInit {
 
-  menuItems =
-    [
-      {
-        categoryId: 1,
-        categoryName: 'Paneer',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 4, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 5, name: 'Samosa', isSelected: false, imageUrl: '' },
-          new Item(1,'Samosa', false, '')
-        ]
-      },
-      {
-        categoryId: 2,
-        categoryName: 'stalls',
-         items: [
-          { itemId: 6, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 7, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 8, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 9, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 10, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 3,
-        categoryName: 'chaat',
-         items: [
-          { itemId: 11, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 12, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 13, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 14, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 15, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 4,
-        categoryName: 'deserts',
-         items: [
-          { itemId: 16, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 17, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 18, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 19, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 20, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 5,
-        categoryName: 'maincourse',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 4, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 5, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-      {
-        categoryId: 6,
-        categoryName: 'stalls',
-         items: [
-          { itemId: 1, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 2, name: 'Samosa', isSelected: false, imageUrl: '' },
-          { itemId: 3, name: 'Samosa', isSelected: false, imageUrl: '' },
-        ]
-      },
-    ]
+  menuItems = CATEGORIES
 
     currentMenuItems: Object[]
 
